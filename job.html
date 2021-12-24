@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job</title>
+    <!-- <link rel="stylesheet" href="job.css"> -->
+    <script src="https://kit.fontawesome.com/f7b839b1fe.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/f7b839b1fe.js" crossorigin="anonymous"></script>
+
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(233, 233, 233);
+    /* font-family: "Poppins",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; */
+}
+
+/* .logo{
+    padding: 0 5px 0 20px;
+    width: 50px;
+    height: 45px;
+    border-radius: 5px;
+   
+    
+} */
+
+
+.logo{
+    padding: 0 5px 0 25px;
+    display: flex;
+}
+
+.navbar img{
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+
+}
+
+
+/* .nav-left img{
+    width: 50px;
+    height: 45px;
+    border-radius: 5px;
+    
+    
+} */
+
+.navbar{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+     /* justify-content: space-evenly; */
+    border-bottom:  0.1px solid rgb(184, 184, 184);
+    padding-top: 15px;
+    background-color: #fff;
+
+   
+    /* flex-direction: row; */
+    
+    
+
+
+}
+
+.nav-left, .nav-option{
+    display: flex;
+   
+}
+
+
+.search-bar{
+    display: flex;
+    align-items: center;
+    height: 80%;
+    padding-right: 5px;
+    padding-left: 10px;
+    margin-left: 5px;
+    color: rgb(163, 162, 162);
+    background-color: rgb(236, 241, 247);
+    border-radius: 5px;
+    
+}
+
+.search-box{
+    background-color:rgb(236, 241, 247);
+    outline: none;
+    border: none;
+    font-size: 17px;
+    margin-left: 5px;
+
+}
+
+.nav-options{
+    display:flex;
+    flex-direction:  column;
+    align-items: center;
+    margin-right: 20px;
+    color: grey;
+    cursor: pointer;
+    text-align: center;
+    
+}
+
+.nav-options :hover{
+    color: rgb(32, 34, 36);
+}
+
+/* ul li{
+    padding: 5px;
+    color: #0000;
+
+}
+
+ul li :hover{
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+
+} */
+
+
+
+nav a{
+    color: grey;
+    text-decoration: none;
+    font-size: 17px;
+    margin-top: 4px;
+    font-weight: 400;
+
+}
+
+/* .nav-a{
+    display: flex;
+    flex-direction: row;
+
+} */
+
+.premium {
+    color: rgba(122, 86, 52, 0.863);
+    text-decoration: none;
+    
+}
+
+.premium:hover{
+    text-decoration: underline;
+    color: rgba(122, 86, 52, 0.863);
+}
+
+
+
+
+/* MAIN BODY */
+.body-main{
+    display: flex;
+    margin-top: 35px;
+    /* max-width: 1300px; */
+    margin: 0 15px;
+    padding: 25px;
+    
+
+    justify-content: center;
+}
+
+ /* sidebar-left start */
+
+.sidebar{
+    /* position: sticky; */
+    top: 80px;
+    flex: 0.2;
+    border-radius: 10px;
+    height: fit-content;
+    padding: 20px;
+    
+  
+
+}
+.sidebar-top img{
+    margin-bottom: 20px;
+    width: 10%;
+    height: 60px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+    object-fit: cover;
+    
+}
+
+.sidebar-top{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 1px solid lightgray;
+    border-bottom: 1;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+   
+
+    background-color: #fff;
+    list-style: none;
+    height: 330px;
+    border-style: none;
+    padding: 15px ; 
+    
+    
+}
+
+.fa-user-circle{
+    font-size: 30px;
+    display: flex;
+    align-content: center;
+}
+
+.name{
+    font-size: 20px;
+    font-weight: 1000;
+    padding: 10px;
+   
+}
+
+.name:hover{
+    text-decoration-color: rgb(239, 206, 135);
+    text-decoration: underline;
+    
+}
+
+.add-photo{
+    color: #0a66c2;
+    text-decoration: none;
+   
+}
+
+.add-photo:hover{
+    text-decoration: underline;
+    color: #0a66c2;
+}
+
+.sidebar-bottom{
+    background-color: #fff;
+    border: 1px solid lightgray;
+    margin-top: 10px;
+    border-radius: 10px;
+    /* padding: 5px;
+      */
+}
+
+.bottom-option{
+    text-decoration: none;
+    color: #0a66c2;
+    list-style: none;
+    padding-top: 15px;
+    padding-left: 15px;
+
+}
+
+.bottom-option:hover{
+    text-decoration: underline;
+    color:  #0a66c2;
+
+}
+
+.bottom-option-button{
+    border-style: none;
+    padding: 15px ; 
+    text-align: center;
+    list-style: none;
+    color: rgb(92, 88, 88);
+
+}
+
+.bottom-option-button:hover{
+    background-color: rgb(227, 225, 225);
+    font-size: large;
+    transition: 0.1s;
+    /* color: none; */
+    /* border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; */
+    
+}
+
+/* sidebar-left-end*/
+
+
+
+/* FEED  */
+.feed{
+    flex: 0.50;
+    margin: 0 20px;
+    padding-top: 20px;
+    
+}
+
+.feed-start-container{
+    background-color: #fff;
+    border: 1px solid lightgray;
+    padding: 0 10px;
+    padding-top: 15px;
+    padding-bottom: 4px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    align-items: center;
+    display: grid;
+    height: 350px;
+    
+}
+
+.feed-start{
+    display: grid;
+    grid-template-columns: .5fr 2.5fr;   
+}
+
+
+#feed-avatar{
+    font-size: 55px;
+    /* padding: 1px; */
+    color: #0a66c2;
+    cursor: pointer;
+    justify-content: center;
+
+}
+
+.post{
+    border-radius: 30px;
+    border: 1px solid lightgray;
+    padding: 18px;
+    color: rgb(148, 147, 147);
+    cursor: pointer;
+    height: 270px;
+    width: 600px;
+
+}
+
+.post:hover{
+    background-color: rgb(239, 239, 239);
+}
+
+
+.follow-section{
+    background-color: #fff;
+    margin-top: 20px;
+    padding: 5px 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid lightgray;
+    list-style: none;
+    margin-top: 1px;
+   
+    height: 170px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+     /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
+
+    
+    /* padding: 0 10px;
+    padding-top: 15px;
+    padding-bottom: 4px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    align-items: center;
+    display: grid; */
+
+}
+
+/* .follow-option{
+    border: 1px solid lightgray;
+
+    
+} */
+
+.sug{
+    margin-top: 15px;
+    margin-left: 5px;
+}
+.recom{
+    margin-top: 40px;
+    margin-left: 15px;
+    display: flex;
+    margin-bottom: 40px;
+}
+.detail{
+    margin-top: 3px;
+    margin-left: 18px;
+}
+.detail h4{
+    /* margin-top: 18px;
+    margin-left: 15px; */
+    color: #0a66c2;
+}
+
+.hr h5{
+    float: left;
+    margin-right: 5px;
+}
+.hrimg{
+    float: right;
+}
+
+.fa-blog{
+    color: rgb(8, 168, 8);
+}
+
+
+
+.line{
+    border-bottom: 1px solid lightgray ;
+   
+
+}
+
+.content-follow-option{
+    display: flex;
+    align-items: center;
+    
+}
+
+.fa-ellipsis-h{
+    font-size: 20px;
+    padding: 7px;
+    
+}
+
+.fa-ellipsis-h:hover{
+    background-color: rgb(239, 237, 237);
+    border-radius: 30px;
+    /* padding: 10px; */
+
+}
+
+/* .img-fo{
+    height: 20%;
+} */
+
+/* .content-follow-option{
+    
+} */
+
+.btns-follow-option{
+    border: none;
+    color: #0a66c2;
+    padding: 10px 15px;
+    border-radius: 5px;
+    justify-content: center;
+    background-color: transparent;
+    font-size: 18px;
+}
+
+.btns-follow-option:hover{
+    background-color:  #e0e8f2;
+    transition: .3s;
+    cursor: pointer;
+    
+}
+
+.fa-plus{
+    padding-right: 8px;
+}
+.feed-post{
+    background-color: #fff;
+    margin-top: 20px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    height: 900px;   
+}
+.forU{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+/* sidebar-right */
+
+.sidebar-right{
+    flex: 0.30;
+    margin: 20px 20px;
+ 
+}
+
+.sidebar-right-follow{
+    background-color: #fff;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 7px 15px;
+    padding-top: 13px;
+    height: 230px;
+}
+
+/* sidebar-right-end */
+
+.btn-sidebar-right{
+    background-color: transparent;
+    border: 1px solid rgb(18, 177, 240);;
+    color: rgb(18, 177, 240);
+    border-radius: 30px;
+    padding: 8px 18px;
+    font-size: 16px;
+
+}
+
+.btn-sidebar-right:hover{
+    background-color: rgb(216, 213, 213);
+    /* box-shadow: 1px inset rgb(99, 98, 98); */
+    outline:  1px solid rgb(99, 98, 98);
+    transition: 0.5s;
+    
+
+}
+
+.prepare{
+    border-radius: 20px;
+    border: 1px solid lightgray;
+    padding: 18px;
+    color: rgb(42, 126, 252);
+    cursor: pointer;
+    height: 130px;
+    width: 270px;
+    margin: 2px;
+    display: flex;
+    
+}
+.prepare img{
+    margin-top: 15px;
+    margin-left: 8px;
+}
+.bem a{
+    text-decoration: none;
+}
+.bem{
+    margin-top: 15px;
+    margin-left: 15px;
+}
+.bem p{
+    margin-top: 15px;
+    color: black;
+}
+
+.section{
+    display: flex;
+    padding: 10px 5px;
+}
+
+/* .section img{
+    display: flex;
+    align-content: start;
+} */
+
+.btn-view{
+    margin: 10px;
+    background-color: transparent;
+    border: none;
+    color: rgb(148, 148, 148);
+    font-size: 17px;
+    padding: 10px;
+}
+
+.btn-view:hover{
+    background-color: rgb(232, 230, 230);
+    transition: .2s;
+    border-radius: 5px;
+}
+
+.icon-plus{
+    color: rgb(18, 177, 240);
+   
+}
+
+.icon-arr{
+    font-size: 20px;
+}
+
+
+
+/* 
+@media only screen and (max-width: 300px) {
+    .body-main, .feed, .sidebar, .sidebar-right{
+        flex: none;
+    }
+    
+} */
+
+</style>
+<body>
+    <!-- navigation start -->
+    <nav class="navbar"> 
+        <div class="nav-left">
+            <a class="logo" href="/Home.html">
+                <img src="/img/link start blue.jpg" alt="Link Start">
+            </a>
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input class="search-box" type="text" placeholder="Search">
+            </div>
+        </div>
+
+        <ul class="nav-option">
+            <li class="nav-options">
+                <i class="fas fa-home" id> </i>
+                <a class="nav-a" href="/Home.html"> Home</a></li>
+            <li class="nav-options">
+                <i class="fas fa-user-friends"></i>
+                <a class="nav-a" href="/my-network.html">My Network</a></li>
+
+            <li class="nav-options">
+                <i class="fas fa-briefcase"></i>
+                <a class="nav-a" href="/job.html">Jobs</a></li>
+
+            <li class="nav-options">
+                <i class="fas fa-comment-dots"></i>
+                <a class="nav-a" href="">Messaging</a></li>
+
+            <li class="nav-options">
+                <i class="fas fa-bell"></i>
+                <a class="nav-a" href="#">Notifications</a></li>
+
+            <li class="nav-options">
+                <i class="fas fa-user"></i>
+                <a class="nav-a" href="profile.html">Me</a></li>
+
+            <li class="nav-options">
+                <i class="fas fa-list"></i>
+                <a class="nav-a" id= "works" href="/amanda1.html">Works</a></li>
+
+            <li class="nav-options">
+                <a class="premium" href="">Try Premium for free</a></li>
+        </ul>
+    </nav>
+    <!-- navigation end -->
+
+    <!-- Main Body start -->
+    <div class="body-main">
+
+        <!-- Sidebarstart -->
+        <section class="sidebar">
+            <div class="sidebar-top">
+                <div class="marks">
+                    <!-- <div><a class = "name">Welcome, Princess Mae Jhanlee!</a></div>
+                    <div><a class = "add-photo" href="">Add photo</a></div> --> <br>
+                    <a href="myJobs.html"><i class="fas fa-bookmark"> My Jobs</i> <br><br></a>
+                    <a href=""><i class="fas fa-bell">Job Alerts</i><br><br></a>
+                    <a href=""> <i class="fas fa-money-check">Salary</i> <br><br></a>
+                    <a href=""><i class="fas fa-clipboard-list">Skill Assessments</i> <br><br></a>
+                    <a href=""><i class="fas fa-sticky-note">Interview Prep</i> <br><br></a>
+                    <a href=""><i class="far fa-file"> <strong>Resume Builder</strong> </i> <br><br></a>
+                    <a href=""><i class="fas fa-play">Job Seeker Guidance</i> <br><br></a>
+                    <a href=""><i class="fas fa-cog">Application Setting</i> <br><br></a>
+
+                </div>
+            </div>
+            
+     
+            <div class="sidebar-bottom">
+                <ul  class="sidebar-bottom-option">
+                    <li class="bottom-option-button"><i class="fas fa-edit"></i><p>Post a free job</p></li>
+                </ul>
+            </div>
+        </section>
+         <!-- SIdebarends -->
+         
+         <!-- FEED -->
+         <section class="feed">
+            <!-- <div class="feed-start-container">
+                <p>Be first to hear about new jobs</p>
+                <div class="feed-start">
+                    <p class="post">Start a post </p>
+                </div>
+            </div> -->
+
+            
+            <div class="follow-section">
+                <ul>
+                        <h3 class="sug">Suggested job searches</h3>
+                        <br>
+                        <button class="btn-sidebar-right"> <i class="fas fa-bookmark"></i> Software developer</button>
+                        <button class="btn-sidebar-right"> <i class="fas fa-bookmark"></i> Web Developers</button>
+                        <button class="btn-sidebar-right"> <i class="fas fa-bookmark"></i> Web Designer</button> <br> <br>
+                        <button class="btn-sidebar-right"> <i class="fas fa-bookmark"></i> Data Analyst</button>
+                        <button class="btn-sidebar-right"> <i class="fas fa-bookmark"></i> Programmers</button>
+                        <button class="btn-sidebar-right"> <i class="fas fa-bookmark"></i> Technical Support </button>
+                        
+                </ul>   
+            </div>
+
+           
+
+            <div class="feed-post">
+                <div class="forU">
+                    <h3>Recommended for you</h3>
+                    <p>Based on your profile and search history.</p>
+                </div>
+                
+                <div class="recom">
+                    <img src="/img/paypal.png" alt="paypal" width="68px"> 
+                    <div class="detail">
+                        <h4>IT Assistant</h4>
+                        <p>PayPal<br>
+                        Muntinlupa City, National Capital Region, Philippines</p>
+                        <i class="fas fa-blog"> <span style="color: gray;">Actively recruiting</span></i>
+                        <div class="hr">
+                            <h5 style="color: rgb(8, 168, 8);">1 hour ago </h5><img src="/img/link start blue.jpg" alt="" width="10px"> <span style="font-size: 13px;">Apply easily</span>
+                        </div>
+                    </div>
+                </div> <hr>
+
+                <div class="recom">
+                    <img src="/img/Accenture.jpg" alt="paypal" width="68px"> 
+                    <div class="detail">
+                        <h4>IT Operations Associate | Entry Level</h4>
+                        <p>Accenture <br>
+                        National Capital Region, Philippines On-site</p>
+                        <i class="fas fa-blog"> <span style="color: gray;">Actively recruiting</span></i>
+                        <div class="hr">
+                            <h5 style="color: rgb(8, 168, 8);">2 weeks ago </h5><img src="/img/link start blue.jpg" alt="" width="10px"> <span style="font-size: 13px;">Apply easily</span>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="recom">
+                    <img src="/img/Amdocs.jpg" alt="paypal" width="68px"> 
+                    <div class="detail">
+                        <h4>Software Developer- Java (WITH SIGN ON BONUS)</h4>
+                        <p>Amdocs <br>
+                        National Capital Region, Philippines Hybrid </p>
+                        <i class="fas fa-blog"> <span style="color: gray;">Actively recruiting</span></i>
+                        <div class="hr">
+                            <h5 style="color: rgb(8, 168, 8);">2 weeks ago </h5><img src="/img/link start blue.jpg" alt="" width="10px"> <span style="font-size: 13px;">Apply easily</span>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="recom">
+                    <img src="/img/Gitlab.jpg" alt="paypal" width="68px"> 
+                    <div class="detail">
+                        <h4>Software Engineer in Test (Ruby)</h4>
+                        <p>Gitlab<br>
+                        Manila, National Capital Region, Philippines Remote</p>
+                        <i class="fas fa-blog"> <span style="color: gray;">Actively recruiting</span></i>
+                        <div class="hr">
+                            <h5 style="color: rgb(8, 168, 8);">3 hours ago </h5><img src="/img/link start blue.jpg" alt="" width="10px"> <span style="font-size: 13px;">Apply easily</span>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="recom">
+                    <img src="/img/VASA.jpg" alt="paypal" width="68px"> 
+                    <div class="detail">
+                        <h4>Web Designer</h4>
+                        <p>VASA<br>
+                        Virtual Assistant Staffing Agency  Philippines Remote </p>
+                        <i class="fas fa-blog"> <span style="color: gray;">Actively recruiting</span></i>
+                        <div class="hr">
+                            <h5 style="color: rgb(8, 168, 8);">1 day ago </h5><img src="/img/link start blue.jpg" alt="" width="10px"> <span style="font-size: 13px;">Apply easily</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+         </section>
+
+        <section class="sidebar-right">
+            <div class="sidebar-right-follow">
+                <h1>Ways to prepare</h1> <br>
+                    <div class="prepare">
+                        <div class="bam">
+                            <img src="/img/light-bulb.png" alt="bulb" width="60px" class="bulb">
+                        </div>
+                        <div class="bem">
+                            <a href="Best practices">Best practice</a>
+                            <p>Get the most out of your job search and stand out to recruiters</p>
+                        </div>
+                        
+                       
+                    </div>
+            </div>
+        </section>
+    </div>  
+</body>
+</html>

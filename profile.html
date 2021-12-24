@@ -1,0 +1,1072 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f7b839b1fe.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/f7b839b1fe.js" crossorigin="anonymous"></script>   
+    <!-- <link rel="stylesheet" href="profile.css"> -->
+    <title>Profile</title>
+
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(233, 233, 233);
+    /* font-family: "Poppins",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; */
+}
+
+.logo{
+    padding: 0 5px 0 25px;
+    display: flex;
+}
+
+.navbar img{
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    
+
+}
+
+
+.navbar{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+     /* justify-content: space-evenly; */
+    border-bottom:  0.1px solid rgb(184, 184, 184);
+    padding-top: 15px;
+    background-color: #fff;
+    /* flex-direction: row; */
+    
+    
+
+
+}
+
+.nav-left, .nav-option{
+    display: flex;
+   
+}
+
+
+.search-bar{
+    display: flex;
+    align-items: center;
+    height: 80%;
+    padding-right: 5px;
+    padding-left: 10px;
+    margin-left: 5px;
+    color: rgb(163, 162, 162);
+    background-color: rgb(236, 241, 247);
+    border-radius: 5px;
+    
+}
+
+.search-box{
+    background-color:rgb(236, 241, 247);
+    outline: none;
+    border: none;
+    font-size: 17px;
+    margin-left: 5px;
+
+}
+
+.nav-options{
+    display:flex;
+    flex-direction:  column;
+    align-items: center;
+    margin-right: 20px;
+    color: grey;
+    cursor: pointer;
+    text-align: center;
+    
+}
+
+.nav-options :hover{
+    color: rgb(32, 34, 36);
+}
+
+/* ul li{
+    padding: 5px;
+    color: #0000;
+
+}
+
+ul li :hover{
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+
+} */
+
+
+
+nav a{
+    color: grey;
+    text-decoration: none;
+    font-size: 17px;
+    margin-top: 4px;
+    font-weight: 400;
+
+}
+
+/* .nav-a{
+    display: flex;
+    flex-direction: row;
+
+} */
+
+.premium {
+    color: rgba(122, 86, 52, 0.863);
+    text-decoration: none;
+    
+}
+
+.premium:hover{
+    text-decoration: underline;
+    color: rgba(122, 86, 52, 0.863);
+}
+
+
+/* MAIN BODY */
+.body-main{
+    display: flex;
+    margin-top: 35px;
+    /* max-width: 1300px; */
+    margin: 0 15px;
+    padding: 25px;
+    justify-content: center;
+}
+
+ /* sidebar-left start */
+
+.sidebar{
+    /* position: sticky; */
+    top: 80px;
+    flex: 0.2;
+    border-radius: 10px;
+    height: fit-content;
+    padding: 20px;
+    
+  
+
+}
+.sidebar-top img{
+    margin-bottom: 20px;
+    width: 10%;
+    height: 60px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+    object-fit: cover;
+    
+}
+
+.sidebar-top{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 1px solid lightgray;
+    border-bottom: 1;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+   
+
+    background-color: #fff;
+    list-style: none;
+    height: 330px;
+    border-style: none;
+    padding: 15px ; 
+    /* padding-top: 20px;
+    padding-left: 10px;
+    margin-bottom: 20px; */
+    
+}
+
+.fa-user-circle{
+    font-size: 30px;
+    display: flex;
+    align-content: center;
+}
+
+
+.name{
+    font-size: 20px;
+    font-weight: 1000;
+    padding: 10px;
+   
+}
+
+.name:hover{
+    text-decoration-color: rgb(239, 206, 135);
+    text-decoration: underline;
+    
+}
+
+.add-photo{
+    color: #0a66c2;
+    text-decoration: none;
+   
+}
+
+.add-photo:hover{
+    text-decoration: underline;
+    color: #0a66c2;
+}
+
+
+/* sidebar-left-end*/
+
+
+
+/* FEED  */
+.feed{
+    flex: 0.50;
+    margin: 0 20px;
+    padding-top: 20px;
+
+}
+
+.feed-start-container{
+    background-color: #fff;
+    border: 1px solid lightgray;
+    padding: 0 10px;
+    padding-top: 15px;
+    padding-bottom: 4px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    align-items: center;
+    display: grid;
+    height: 350px;
+    
+}
+
+
+
+
+.post:hover{
+    background-color: rgb(239, 239, 239);
+}
+
+
+.follow-section{
+    background-color: #fff;
+    /* margin-top: 10px;
+    margin-left: 10px;
+    padding: 5px 10px; */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 1px solid lightgray;
+    list-style: none;
+    z-index: 1;
+    height: 500px;
+    width: 930px;    
+    
+    position: relative;
+    top: 0;
+    left: 0;
+    /* width: 100%; */
+}
+
+.follow-section-two{
+    background-color: #0773a8;
+    margin-top: 10px;
+    /* 
+    margin-left: 10px;
+    padding: 5px 10px; */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 1px solid lightgray;
+    list-style: none;
+   
+    height: 400px;
+    width: 930px;    
+    
+    position: relative;
+    top: 0;
+    left: 0;
+    /* width: 100%; */
+}
+.sidebar-right-work-two{
+    margin: 25px;
+}
+
+.sidebar-right-follow-workii{
+    background-color: #fff;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 7px 15px;
+    padding-top: 10px;
+    height: 50px;
+    /* margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 26px; */
+    width: 100px;
+    float: right;
+    display: flex;
+    margin: 10px;  
+}
+
+
+
+
+
+
+.cover img{
+    object-fit: cover;
+    position: relative;
+    top: 0;
+    left: 0;
+    /* border: 1px solid #000000; */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.dp img{
+    border-radius: 300px;
+    width: 200px;
+    height: 200px;
+    margin-top: 40px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    border: 5px solid white;
+    object-fit: cover;
+    
+}
+ 
+.identity h3{
+    margin-top: 90px;
+    margin-left: 30px;
+}
+
+.identity p{
+    margin-left: 30px;
+}
+
+.fa-pencil-alt{
+    float: right;
+    margin-right: 20px;
+    margin-top: 10px;
+    width: 10px;
+}
+
+.btn-sidebar-right{
+    background-color: transparent;
+    border: 1px solid rgb(18, 177, 240);;
+    color: rgb(18, 177, 240);
+    border-radius: 20px;
+    padding: 8px 18px;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: 19px;
+}
+
+.btn-sidebar-right:hover{
+    background-color: rgb(216, 213, 213);
+    /* box-shadow: 1px inset rgb(99, 98, 98); */
+    outline:  1px solid rgb(99, 98, 98);
+    transition: 0.5s;
+}
+
+
+
+
+
+.con a{
+    text-decoration: none;
+    color: #0a66c2;
+}
+
+.con a:hover{
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+.line{
+    border-bottom: 1px solid lightgray ;
+   
+
+}
+
+.content-follow-option{
+    display: flex;
+    align-items: center;
+    
+}
+
+.fa-ellipsis-h{
+    font-size: 20px;
+    padding: 7px;
+    
+}
+
+.fa-ellipsis-h:hover{
+    background-color: rgb(239, 237, 237);
+    border-radius: 30px;
+    /* padding: 10px; */
+
+}
+
+.btns-follow-option{
+    border: none;
+    color: #0a66c2;
+    padding: 10px 15px;
+    border-radius: 5px;
+    justify-content: center;
+    background-color: transparent;
+    font-size: 18px;
+}
+
+.btns-follow-option:hover{
+    background-color:  #e0e8f2;
+    transition: .3s;
+    cursor: pointer;
+    
+}
+
+.fa-plus{
+    padding-right: 8px;
+}
+/* sidebar-right */
+
+.sidebar-righty{
+    flex: 0.20;
+    margin-top: 10px;
+ 
+}
+
+.sidebar-righty-follow{
+    background-color: #fff;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 7px 15px;
+    padding-top: 13px;
+    height: 70px;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 10px;
+    width: 285px;
+    
+}
+.edit_profile{
+    margin-top: 10px;
+}
+.edit_profile p{
+    float: left;
+}
+
+.edit_profile i{
+    float: right;
+    
+}
+.language{
+    margin-top: 10px;
+}
+.language p{
+    float: left;
+}
+
+.language i{
+    float: right;
+   margin-top: 1px;
+    
+}
+
+
+/* dashboard  */
+.follow-section-two{
+    background-color: #0773a8;
+    margin-top: 10px;
+    /* 
+    margin-left: 10px;
+    padding: 5px 10px; */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 1px solid lightgray;
+    list-style: none;
+   
+    height: 400px;
+    width: 930px;    
+    
+    position: relative;
+    top: 0;
+    left: 0;
+    /* width: 100%; */
+}
+
+.follow-section-two h2{
+    margin-left: 20px;
+    margin-top: 20px;
+    color: whitesmoke;
+}
+.follow-section-two i{
+    margin-left: 20px;
+    color: rgb(216, 216, 216);
+}
+
+.sidebar-right-worki{
+    margin: 25px;
+}
+
+.sidebar-right-follow-worki{
+    background-color: #fff;
+    border: 1px solid lightgray;
+    /* border-radius: 10px;
+    padding: 7px 15px;
+    padding-top: 13px; */
+    height: 80px;
+    /* 
+    margin-left: 10px;
+    margin-right: 26px; */
+    width: 290px;
+    float: left;
+    display: flex;
+    /* margin: 0;   */
+    align-content: center;
+    
+}
+.sidebar-right-follow-worki h1{
+    font-size: 35px;
+    margin-top: 10px;
+    margin-left: 10px;
+    color: #006192;
+}
+.sidebar-right-follow-worki p{
+    margin-left: 10px;
+}
+
+
+
+.sidebar-right-link{
+    background-color: #fff;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 7px 15px;
+    padding-top: 13px;
+    height: 250px;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 10px;
+    width: 285px;
+}
+.sidebar-right-link img{
+    width: 282px;
+    height: 245px;
+    object-fit: cover;
+}
+
+
+.sidebar-right{
+    flex: 0.20;
+    margin-top: 10px;
+ 
+}
+
+
+
+
+
+.sidebar-right-follow-work{
+    background-color: #fff;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 7px 15px;
+    padding-top: 13px;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 5px;
+    width: 400px;
+    float: left;
+}
+
+.edit_profilework{
+    margin-top: -3px;
+}
+.edit_profilework{
+    float: left;
+}
+
+.edit_profilework i{
+    float: right;
+    margin-right: -270px;
+    margin-top: -50px;
+      
+}
+
+.edit_profilework p{
+    color: black;
+    
+}
+
+.edit_profilework a{
+    text-decoration: none;
+    
+}
+
+
+.sidebar-right-follow-workee{
+    background-color: #fff;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 7px 15px;
+    padding-top: 13px;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: -2px;
+    margin-right: 5px;
+    width: 848px;
+    float: left;
+    height: 185px;
+}
+
+.fa-volume-up{
+    margin-right: 5px;
+}
+.edit_profileworkee p{
+    margin-left: 43px;
+    color: gray;
+    margin-bottom: 20px;
+}
+.fa-users{
+    margin-right: 5px;
+    margin-top: 15px;
+}
+.fa-bookmark{
+    margin-right: 5px;
+    margin-top: 15px;
+}
+
+
+.sidebar-right-follow-workii{
+    background-color: #fff;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 7px 15px;
+    padding-top: 13px;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 26px;
+    width: 400px;
+    float: right;
+    
+}
+
+.edit_profileworkii{
+    margin-top: 10px;
+}
+.edit_profileworkii{
+    float: left;
+}
+
+.edit_profileworkii i{
+    float: right;
+    margin-right: -50px;
+    margin-top: -45px;
+}
+
+.edit_profileworkii p{
+    color: black;
+    
+}
+
+.edit_profileworkiix a{
+    text-decoration: none;
+    
+}
+
+/* sidebar-right-end */
+
+.prepare{
+    border-radius: 20px;
+    border: 1px solid lightgray;
+    padding: 18px;
+    color: rgb(42, 126, 252);
+    cursor: pointer;
+    height: 130px;
+    width: 270px;
+    margin: 2px;
+    display: flex;
+    
+}
+.prepare img{
+    margin-top: 15px;
+    margin-left: 8px;
+}
+
+
+.section{
+    display: flex;
+    padding: 10px 5px;
+}
+.btn-view{
+    margin: 10px;
+    background-color: transparent;
+    border: none;
+    color: rgb(148, 148, 148);
+    font-size: 17px;
+    padding: 10px;
+}
+
+.btn-view:hover{
+    background-color: rgb(232, 230, 230);
+    transition: .2s;
+    border-radius: 5px;
+}
+
+.icon-plus{
+    color: rgb(18, 177, 240);
+   
+}
+
+.icon-arr{
+    font-size: 20px;
+}
+
+/* sidebar-right */
+
+.sidebar-right{
+    flex: 0.30;
+    margin: 20px 20px;
+ 
+}
+
+.sidebar-right-follow{
+    background-color: #fff;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 7px 15px;
+    padding-top: 13px;
+    width: 285px;
+    margin-top: 10px;
+    margin-left: 7px;
+}
+
+/* sidebar-right-end */
+
+.btn-sidebar-rightt{
+    background-color: transparent;
+    border: 1px solid rgb(142, 139, 139);
+    color: rgb(129, 129, 129);
+    border-radius: 30px;
+    padding: 8px 18px;
+    font-size: 16px;
+    margin-top: 8px;
+
+}
+
+.btn-sidebar-rightt:hover{
+    background-color: rgb(216, 213, 213);
+    /* box-shadow: 1px inset rgb(99, 98, 98); */
+    outline:  1px solid rgb(99, 98, 98);
+    transition: 0.5s;
+    
+
+}
+
+.section{
+    display: flex;
+    padding: 10px 5px;
+}
+
+.section img{
+    display: flex;
+    align-content: start;
+    object-fit: cover;
+}
+
+.content-sidebar-right{
+    padding: 0 10px;
+}
+
+.btn-view{
+    margin: 10px;
+    background-color: transparent;
+    border: none;
+    color: rgb(148, 148, 148);
+    font-size: 17px;
+    padding: 10px;
+}
+
+.btn-view:hover{
+    background-color: rgb(232, 230, 230);
+    transition: .2s;
+    border-radius: 5px;
+}
+
+.icon-plus{
+    color: rgb(99, 98, 98);
+   
+}
+
+.icon-arr{
+    font-size: 20px;
+}
+
+/* 
+@media only screen and (max-width: 300px) {
+    .body-main, .feed, .sidebar, .sidebar-right{
+        flex: none;
+    }
+    
+} */
+</style>
+<body>
+    <!-- navigation start -->
+    <nav class="navbar"> 
+        <div class="nav-left">
+            <a class="logo" href="/Home.html">
+                <img src="/img/link start blue.jpg" alt="linkedIn">
+            </a>
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input class="search-box" type="text" placeholder="Search">
+            </div>
+        </div>
+
+        <ul class="nav-option">
+            <li class="nav-options">
+                <i class="fas fa-home" id> </i>
+                <a class="nav-a" href="/Home.html"> Home</a></li>
+            <li class="nav-options">
+                <i class="fas fa-user-friends"></i>
+                <a class="nav-a" href="/my-network/my-network.html">My Network</a></li>
+
+            <li class="nav-options">
+                <i class="fas fa-briefcase"></i>
+                <a class="nav-a" href="job.html">Jobs</a></li>
+
+            <li class="nav-options">
+                <i class="fas fa-comment-dots"></i>
+                <a class="nav-a" href="">Messaging</a></li>
+
+            <li class="nav-options">
+                <i class="fas fa-bell"></i>
+                <a class="nav-a" href="#">Notifications</a></li>
+
+            <li class="nav-options">
+                <i class="fas fa-user"></i>
+                <a class="nav-a" href="profile.html">Me</a></li>
+
+            <li class="nav-options">
+                <i class="fas fa-list"></i>
+                <a class="nav-a" id= "works" href="/amanda1.html">Works</a></li>
+
+            <li class="nav-options">
+                <a class="premium" href="">Try Premium for free</a></li>
+        </ul>
+    </nav>
+    <!-- navigation end -->
+    <div class="body-main">
+         
+         <!-- FEED -->
+         <section class="feed">    
+            <div class="follow-section">
+                <div class="cover">
+                    <img src="/img/code.jpg" alt="cover" width="930px" height="200px">
+                </div>
+                <div class="dp">
+                    <img src="/img/student.jpg" alt="dp">
+                </div>
+                <div class="identity">
+                    <i class="fas fa-pencil-alt"></i>
+                    <h3>Monica Ocampo</h3>
+                    <p>i18n_onboarding_profile_edu_suggested_headline</p>
+                    <p class="con">Cavite, Calabarzon, Philippines &#183; <a href="">Contact info</a></p>
+                    <ul>
+                        <button class="btn-sidebar-right">Open to</button>
+                        <button class="btn-sidebar-right">Add section</button>
+                        <button class="btn-sidebar-right">More</button>
+                    </ul>
+                </div>
+
+                <section class="sidebar-right-work">
+                    <div class="sidebar-right-follow-work">
+                        <div class="edit_profilework">
+                        <a href=""><p>Open to work</p></a>    
+                        <p>Assitanct Editor roles</p>
+                        <p style="color: rgb(55, 152, 243);">See all details</p>
+                        <a href=""><i class="fas fa-edit"></i></a>
+                
+                        </div>
+                    </div>
+                    <div class="sidebar-right-follow-workii">
+                        <div class="edit_profileworkii">
+                        <a href="" style="text-decoration: none;"><p>Share that you're hiring and attract qualified candidates</p></a>  
+                        <p style="color: rgb(55, 152, 243);">Get started</p> 
+
+                        <a href=""><i class="fas fa-times"></i></a>
+                
+                        </div>
+                    </div>
+                </section>
+                <!-- <section class="sidebar-right-workii">
+                    
+                </section> -->
+            </div>
+
+            
+
+            <div class="follow-section-two">
+                <h2>Your Dashboard</h2>
+                <i>Private to you</i> <br>
+                <section class="sidebar-right-worki">
+                    <div class="sidebar-right-follow-worki">
+                        <div class="edit_profilework1">
+                        <h1>0</h1>    
+                        <p>Who viewed your profile</p>
+                        <!-- <a href=""><p>Edit public profile & URL</p></a>    
+                        <a href=""><i class="fas fa-question"></i></a> -->
+                
+                        </div>
+                    </div>
+                    <div class="sidebar-right-follow-worki">
+                        <div class="edit_profilewor2">
+                        <h1>0</h1>    
+                        <p>Article views</p>    
+                        <!-- <a href=""><p>Edit public profile & URL</p></a>    
+                        <a href=""><i class="fas fa-times"></i></a> -->
+                
+                        </div>
+                    </div>
+                    <div class="sidebar-right-follow-worki">
+                        <div class="edit_profilework3">
+                        <h1>0</h1>    
+                        <p>Search apperances</p>
+                        <!-- <a href=""><p>Edit public profile & URL</p></a>    
+                        <a href=""><i class="fas fa-times"></i></a> -->
+                
+                        </div>
+                    </div>
+
+                    <div class="sidebar-right-follow-workee">
+                        <div class="edit_profileworkee">
+                            <i class="fas fa-volume-up"></i><span>Creator mode: off</span>
+                            <p>Get discovered, showcase content on your profile, get access to creator tools</p> <hr>
+                            <i class="fas fa-user-friends"></i><span>My Network</span>
+                            <p>Manage your connection, events, interests.</p><hr>
+                            <i class="far fa-bookmark"></i><span>My items</span>
+                            <p>Keep track of your jobs, courses and articles.</p>
+                        </div>
+                    </div>
+                    
+
+
+
+                </section>
+                <!-- <section class="sidebar-right-workii">
+                    
+                </section> -->
+            </div>
+                
+         </section>
+
+         
+
+        <section class="sidebar-righty">
+            <div class="sidebar-righty-follow">
+                <div class="edit_profile">
+                <a href=""><p>Edit public profile & URL</p></a>    
+                <a href=""><i class="fas fa-question"></i></a>
+
+                </div> 
+                <br>
+
+                <div class="language">
+                    <a href=""><p>Add profile in another language</p></a>
+                    <a href=""><i class="fas fa-question"></i></a>
+                </div>
+
+                
+                    <!-- <div class="prepare">
+                        <div class="bem">
+                            <a href="Best practices">Best practice</a>
+                            <p>Get the most out of your job search and stand out to recruiters</p>
+                        </div>
+                    </div> -->
+            </div>
+
+            <div class="sidebar-right-follow">
+                <h3>People you may know</h3><br>
+                <div>
+                    <div class="section">
+                        <div>
+                            <img class="image-fo" src="img/Jhanlee.jpg" width="60">
+                        </div>
+                        <div class="content-sidebar-right">
+                            <h3>Princess Mae Acula</h3>
+                            <p>Software Developer</p>
+                            <button class="btn-sidebar-rightt">Connect</button>
+                        </div>
+
+                    </div>
+                    
+                    <div class="section">
+                        <div>
+                            <img class="image-fo" src="img/Daniel.jpg" width="60">
+                        </div>
+                        <div class="content-sidebar-right">
+                            <h3>Daniel Enciso</h3>
+                            <p>Backend Developer</p>
+                            <button class="btn-sidebar-rightt">Connect</button>
+                        </div>
+                        
+                    </div>
+                    
+                   <div class="section">
+                       <div>
+                           <img class="image-fo" src="/img/Jen.png" width="60">
+                        </div>
+                        <div class="content-sidebar-right">
+                           <h3>Jennylyn Molina</h3>
+                           <p>Web Designer</p>
+                           <button class="btn-sidebar-rightt"></i>Connect</button>
+                        </div>    
+                   </div>
+
+                   <div class="section">
+                    <div>
+                        <img class="image-fo" src="/img/amanda.jpg" width="60">
+                     </div>
+                     <div class="content-sidebar-right">
+                        <h3>Amanda Ruazol</h3>
+                        <p>Data Analyst</p>
+                        <button class="btn-sidebar-rightt">Connect</button>
+                     </div>    
+                </div>
+                   
+                </div>
+                <button class="btn-view">View all recemmendations <i class="icon-arr">&#8594;</i></button>
+            </div>
+            <div class="sidebar-right-link">
+                <img src="/img/linke.jpg" alt="">
+            </div>
+        </section>
+    </div>  
+</body>
+</html>
+

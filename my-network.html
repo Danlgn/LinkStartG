@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/my-network/network.css">
+    <script src="https://kit.fontawesome.com/f7b839b1fe.js" crossorigin="anonymous"></script>
+
+
+ 
+</head>
+<style>
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    
+    :root{
+        --dark-gray: rgb(67, 65, 65);
+        --light-gray-hover: rgb(227, 225, 225);
+    }
+    
+    
+    body{
+        background-color: rgb(233, 233, 233);
+        font-family: -apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Fira Sans,Ubuntu,Oxygen,Oxygen Sans,Cantarell,Droid Sans,Apple Color Emoji,Segoe UI Emoji,Segoe UI Emoji,Segoe UI Symbol,Lucida Grande,Helvetica,Arial,sans-serif;
+    }
+    
+    .navbar img{
+        width: 45px;
+        height: 40px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+    
+    }
+    
+    
+    .navbar{
+        width: 100%;
+        position: sticky;
+        top: 0;
+        height: 50px;
+        display: flex;
+        /* justify-content: space-between; */
+        justify-content: space-evenly;
+        border-bottom:  0.1px solid rgb(184, 184, 184);
+        padding-top: 15px;
+        background-color: #fff;
+    }
+    
+    .nav-left, .nav-option{
+        display: flex;
+       
+    }
+    
+    
+    .search-bar{
+        display: flex;
+        align-items: center;
+        height: 80%;
+        padding-right: 5px;
+        padding-left: 10px;
+        margin-left: 5px;
+        color: rgb(163, 162, 162);
+        background-color: rgb(236, 241, 247);
+        border-radius: 5px;
+        
+    }
+    
+    .search-box{
+        background-color:rgb(236, 241, 247);
+        outline: none;
+        border: none;
+        font-size: 17px;
+        margin-left: 5px;
+    
+    }
+    
+    .icon{
+        font-size: 25px;
+    
+    }
+    
+    .nav-options{
+        display:flex;
+        flex-direction:  column;
+        align-items: center;
+        justify-items: center;
+        margin-right: 20px;
+        color: grey;
+        cursor: pointer;
+        text-align: center;
+        padding: 0 7px;
+        
+        
+    }
+    
+    nav a{
+        color: grey;
+        text-decoration: none;
+        font-size: 17px;
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+    
+    }
+    
+    .nav-option :hover{
+        color: rgb(32, 34, 36); 
+    }
+    
+    .nav-options:hover{
+        border-bottom: 3px solid black;
+    }
+    
+    
+    .premium {
+        color: rgba(122, 86, 52, 0.863);
+        text-decoration: none;
+    }
+    
+    .premium:hover{
+        text-decoration: underline;
+        color: rgba(122, 86, 52, 0.863);
+    }
+    
+    
+    
+    
+    
+    
+    /* /MAIN/ */
+    .container{
+        /* display: grid;
+        grid-template-columns: .5fr 1.5fr;
+        grid-gap: 25px; */
+        display: flex;
+        margin: 30px;
+        padding:  15px 80px;
+    }
+    
+    .side-bar-container{
+        flex: 0.3;
+        /* background-color: #fff; */
+        /* border: 1px solid lightgray; */
+        border-radius: 10px;
+        
+       
+    }
+    
+    .side-bar{
+        background-color: #fff;
+        border: 1px solid lightgray;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        
+    
+        
+    }
+    
+    .side-bar h3{
+        font-weight: 500;
+        color: var(--dark-gray);
+        margin: 15px
+        
+    }
+    
+    .btns-side-bar{
+        list-style: none;
+        /* padding: 10px; */
+    }
+    
+    
+    .side-bar-option{
+        font-size: 18px;
+        padding: 10px;
+        color: grey;
+        display: flex;
+        
+    }
+    
+    .side-bar-option:hover{
+        background-color: var(--light-gray-hover);
+    
+    }
+    
+    .side-bar-option i{
+        text-align: justify;
+        padding: 5px 25px;
+    
+    }
+    /* 
+    .side-bar-option p{
+        text-align: justify;
+    } */
+    
+    
+    
+    .btn-sb{
+        font-weight: 16px;
+        font-size: 17px;
+        margin: 15px;
+        border: none;
+        background-color: transparent;
+        color: gray;
+        padding: 8px;
+    }
+    
+    .btn-sb:hover{
+        background-color: var(--light-gray-hover);
+        border-radius: 4px;
+    }
+    
+    
+    .img-side-bar{
+        background-color: #fff;
+        padding: 6px 0;
+        
+    }
+    
+    .img-side-bar img{
+        width: 100%;
+    }
+    
+    
+    .link-side-bar{
+        background-color: #fff;
+        border: 1px solid lightgray;
+        padding: 10px;
+        font-size: 18px;
+        text-align: center;
+        
+    
+    }
+    
+    .link-side-bar a{
+        color: #0a66c2;
+        text-decoration: none;
+        font-weight: 500;
+    }
+    
+    .link-side-bar a:hover{
+        text-decoration: underline;
+    
+    }
+    
+    .footer-side-bar{
+        border: 1px solid lightgray;
+        background-color: #fff;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        padding: 15px;
+        
+    }
+    
+    .footer-side-bar ul{
+        list-style: none;
+    
+    }
+    
+    
+    
+    /* CONTENT GALLERY */
+    
+    .main-container{
+        flex: 0.7;
+        /* margin: 0 30px; */
+        padding: 0 30px;
+    }
+    
+    .invitations{
+        background-color: #fff;
+        border: 1px solid lightgray;
+        padding: 10px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--dark-gray);
+    }
+    
+    .invitations h3{
+        font-weight: 500;
+        padding: 0 10px;
+    }
+    
+    .invitations button{
+        background-color:  transparent;
+        border: none;
+        padding: 10px;
+        font-size: 15px;
+        border-radius: 3px;
+        color: gray;
+    }
+    
+    .invitations button:hover{
+        background-color: var(--light-gray-hover);
+    }
+    
+    .follower-gallery{
+        background-color: #fff;
+        border: 1px solid lightgray;
+        padding: 10px;
+        margin: 15px 0;
+        border-radius: 10px;
+        
+    }
+    
+    .upper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .upper h3{
+        padding: 20px;
+        font-weight:  500;
+    }
+    
+    .upper button{
+        background-color:  transparent;
+        border: none;
+        font-size: 15px;
+        padding: 10px;
+        border-radius: 3px;
+        color: gray;
+    
+    }
+    
+    .upper button:hover{
+        background-color: var(--light-gray-hover);
+    
+    }
+    
+    
+    
+    .followers{
+        /* background-color: #fff; */
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        flex-flow: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        gap: 15px;
+    }
+    
+    .follower-option{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid lightgray;
+        color: gray;
+        border-radius: 10px;
+        padding-bottom: 15px;
+    
+    }
+    
+    .follower-option:hover{
+        box-shadow: 1px 2px 15px 2px rgb(12, 4, 20, 0.2);
+    }
+    
+    .main-img{
+        width: 260px;
+        height: 150px;
+        object-fit: cover;
+        margin-bottom: -90px;
+        border-top-left-radius: 9px;
+        border-top-right-radius: 9px;
+    }
+    
+    
+    .name{
+        text-decoration: none;
+        font-weight: 500;
+        color: rgb(60, 60, 60);
+    }
+    
+    .name:hover{
+        text-decoration: underline;
+    }
+    
+    .btn-follow{
+    
+        justify-content: center;
+        background-color: transparent;
+        border: 1px solid #0a66c2;
+        color: #0a66c2;
+        border-radius: 30px;
+        padding: 5px 55px;
+        font-size: 16px;
+        margin-top: 5px;
+    }
+    
+    .btn-follow:hover{
+        background-color: #e0e8f2;
+        outline:  1px solid #0a66c2;
+        transition: 0.5s;
+    
+    }
+    
+    .upper-message{
+        padding: 20px;
+        margin: 10px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    
+    .upper-message h3{
+        font-weight:  500;
+    }
+    
+    .upper-message button{
+        background-color:  transparent;
+        border: none;
+        font-size: 15px;
+        padding: 10px;
+        border-radius: 3px;
+        color: gray;
+    
+    }
+    
+    .upper-message button:hover{
+        background-color: var(--light-gray-hover);
+    
+    }
+    
+    
+    
+    .person-option{
+        display: flex;
+        flex-direction: column;
+        border: 1px solid lightgray;
+        color: gray;
+        border-radius: 10px;
+        padding-bottom: 15px;
+    }
+    
+    .header{
+        width: 380px;
+        height: 90px;
+       
+        object-fit: cover;
+        margin-bottom: -90px;
+        border-top-left-radius: 9px;
+        border-top-right-radius: 9px;
+    }
+    
+    .person-option p{
+        object-fit: contain;
+       
+    }
+    
+    .profile{
+        object-fit: cover;
+        border-radius: 50%;
+        padding: 10px;
+        
+    }
+    
+    
+    .person-option a, p{
+        text-decoration: none;
+        padding: 5px;
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+    }
+    
+    .person-option p:hover{
+        text-decoration: underline;
+    
+    }
+    
+    .person-option button{
+        justify-content: center;
+        background-color: transparent;
+        border: 1px solid #0a66c2;
+        color: #0a66c2;
+        border-radius: 30px;
+        padding: 5px 80px;
+        font-size: 16px;
+        margin-top: 5px;
+    }
+    
+    .person-option button:hover{
+        background-color: #e0e8f2;
+        outline:  1px solid #0a66c2;
+        transition: 0.5s;
+    }
+    
+    
+    
+    
+    .btn-event-follower{
+        display: flex;
+        justify-content: center; 
+    }
+
+
+    
+    
+    @media (max-width: 900px) {
+        .navbar{
+            width: 100%;
+        }
+    
+        .search-bar{
+            display: none;
+        }
+
+    }
+    
+    @media(max-width: 1085px){
+        .search-bar{
+            display: none;
+        }
+    
+    }
+    
+    @media(max-width: 880px){
+        navbar{
+            width: 100%;
+        }
+    
+        .body-main, .feed, .sidebar, .sidebar-right{
+            display: block;
+        }
+    }
+    
+    @media(max-width:600px){
+        .premium{
+            display: none;
+        }
+    
+    }
+
+
+    
+    footer{
+        margin-top: 10px;
+    }
+    
+    .wrap{
+        display: flex;
+        justify-content: center;
+       
+    }
+    
+    .key {
+       width:80px; 
+       object-fit: contain;
+    }
+    
+    .footer p {
+       padding: 30px 20px;
+    }
+    
+    .footer p:hover{
+        color: #0a66c2;
+        text-decoration: underline;
+    }
+    
+    .footer h5{
+        font-weight: lighter;
+    }
+    
+     .linkedin{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+    } 
+    
+    
+    
+    @media (max-width:500px){
+       
+        .footer p {
+           padding: 10px;
+        }
+    
+     
+        
+        }
+    
+        @media (max-width:800px){
+         
+        .footer p, h5{
+            padding: 10px 20px;
+            text-align: center;
+         }
+    
+         .wrap{
+            display: block;
+         
+        }
+        .linkedin img{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            
+        }
+    }
+    
+
+    .logo{
+        display: flex;
+        justify-items: center;
+        align-items: start;
+        color: #006192;
+        text-decoration: none;
+    }
+    
+    </style>
+<!-- navigation start -->
+<nav class="navbar"> 
+    <div class="nav-left">
+        <a class="logo" href=".html ">
+            <h1 class="">Link Start</h1>
+        </a>
+        <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input class="search-box" type="text" placeholder="Search">
+        </div>
+    </div>
+
+    <ul class="nav-option">
+        <li class="nav-options">
+            
+            <a class="nav-a" href="Home.html"><i class="fas fa-home icon" id></i> Home </a>
+            </li>
+        <li class="nav-options s ">           
+            <a class="nav-a" href="/my-network.html"><i class="fas fa-user-friends icon"></i>My Network</a></li>
+
+        <li class="nav-options s">           
+            <a class="nav-a" href="/job.html">  <i class="fas fa-briefcase icon"></i>Jobs</a></li>
+
+        <li class="nav-options s">            
+            <a class="nav-a" href=""><i class="fas fa-comment-dots icon"></i>Messaging</a></li>
+
+        <li class="nav-options s">
+            <a class="nav-a" href="#"><i class="fas fa-bell icon"></i>Notifications</a></li>
+
+        <li class="nav-options s">
+            <a class="nav-a" href="/profile.html"><i class="fas fa-user icon"></i>Me</a></li>
+
+        <li class="nav-options s">
+            <a class="nav-a" id= "works" href="/amanda1.html"><i class="fas fa-list icon"></i>Works</a></li>
+
+        <li class="nav-options" >
+            <a class="premium" href="">Try Premium for free</a></li>
+    </ul>
+</nav>
+<!-- navigation end -->
+<body>
+    <div class="container">
+    <!------------------------------------------1st section ------------------------------------>
+        <section class="side-bar-container">
+            <div class="side-bar">
+                <h3 >Manage my network</h3>
+                <ul class="btns-side-bar">
+                    <li class="side-bar-option"><i class="fas fa-user-friends icon s"></i><p>Connections</p> </li>
+                    <li class="side-bar-option"><i class="far fa-address-book icon s"></i> <p>Contacts</p></li>
+                    <li class="side-bar-option"><i class="far fa-comment icon s"></i> <p></p>People I follow</li>
+                    <li class="side-bar-option"><i class="fas fa-users icon s"></i> <p>Groups</p></li>
+                    <li class="side-bar-option"><i class="far fa-calendar-alt icon s"></i> <p>Events</p></li>
+                    <li class="side-bar-option"><i class="far fa-file-alt icon s"></i><p>Pages</p></li>
+                    <li class="side-bar-option"><i class="far fa-newspaper icon s"></i> <p>Newsletters</p></li>
+                    <li class="side-bar-option"><i class="fas fa-hashtag icon s"></i> <p>Hashtags</p></li>
+                
+                </ul>
+                <button class="btn-sb">Show-more</button>
+            </div>
+
+            <div class="img-side-bar">
+                <img src="/img/linkedin-img.jpg">
+            </div>
+
+            <div class="link-side-bar">
+                <a href="">Grow your Network</a>
+            </div>
+
+            <div class="footer-side-bar">
+
+                <footer>
+                    <div class="footer">
+                        <div class="wrap">
+                               <p>About</p>
+                               <p>Cookie Policy</p>
+                               <p>Privacy Policy</p>
+                               <p>User Agreement</p>
+                               <p>Accessility</p>
+                         
+                        </div>
+                        <div class="Link Start ">
+                            <a class="logo" href="Home.html">
+                                <h1>Link Start</h1>
+                            </a>
+                            <h5>&copy; Link Start Corporation 2021</h5>
+
+                        </div>
+                     </div>
+                </footer>
+            </div>
+
+
+
+        </section>
+    <!------------------------------------------2nd section ------------------------------------>
+        <section class="main-container">
+            <div class="invitations">
+                <h3>No pending invitations</h3>
+                <button>Manage</button>
+            </div>
+
+            <div class="follower-gallery">
+                <div class="upper">
+                    <h3>People who are in the Philippines also follow these pages</h3>
+                    <button>See all</button>
+                </div>
+               
+                <div class="followers">
+                    <div class="follower-option">
+                        <img class="main-img" src="/img/62446083_623166988197650_1588992910014021632_n.jpg">
+                        <img src="/img/lvcc-logo.png" width= 150>
+                        <h3 class=name>LVCC</h3>
+                        <p class="total-followers">000,000 followers</p>
+                        <button class="btn-follow">Follow</button>
+                    </div>
+
+                    <div class="follower-option">
+                        <img class="main-img" src="/img/62446083_623166988197650_1588992910014021632_n.jpg">
+                        <img src="/img/lvcc-logo.png" width= 150>
+                        <h3 class=name>LVCC</h3>
+                        <p class="total-followers">000,000 followers</p>
+                        <button class="btn-follow">Follow</button>
+                    </div>
+
+                    <div class="follower-option">
+                        <img class="main-img" src="/img/62446083_623166988197650_1588992910014021632_n.jpg">
+                        <img src="/img/lvcc-logo.png" width= 150>
+                        <h3 class=name>LVCC</h3>
+                        <p class="total-followers">000,000 followers</p>
+                        <button class="btn-follow">Follow</button>
+                    </div>
+
+                    <div class="follower-option">
+                        <img class="main-img" src="/img/62446083_623166988197650_1588992910014021632_n.jpg">
+                        <img src="/img/lvcc-logo.png" width= 150>
+                        <h3 class=name>LVCC</h3>
+                        <p class="total-followers">000,000 followers</p>
+                        <button class="btn-follow">Follow</button>
+                    </div>
+
+                    <div class="follower-option">
+                        <img class="main-img" src="/img/62446083_623166988197650_1588992910014021632_n.jpg">
+                        <img src="/img/lvcc-logo.png" width= 150>
+                        <h3 class=name>LVCC</h3>
+                        <p class="total-followers">000,000 followers</p>
+                        <button class="btn-follow">Follow</button>
+                    </div>
+
+                    <div class="follower-option">
+                        <img class="main-img" src="/img/62446083_623166988197650_1588992910014021632_n.jpg">
+                        <img src="/img/lvcc-logo.png" width= 150>
+                        <h3 class=name>LVCC</h3>
+                        <p class="total-followers">000,000 followers</p>
+                        <button class="btn-follow">Follow</button>
+                    </div>
+
+                    <div class="follower-option">
+                        <img class="main-img" src="/img/62446083_623166988197650_1588992910014021632_n.jpg">
+                        <img src="/img/lvcc-logo.png" width= 150>
+                        <h3 class=name>LVCC</h3>
+                        <p class="total-followers">000,000 followers</p>
+                        <button class="btn-follow">Follow</button>
+                    </div>
+
+                    <div class="follower-option">
+                        <img class="main-img" src="/img/62446083_623166988197650_1588992910014021632_n.jpg">
+                        <img src="/img/lvcc-logo.png" width= 150>
+                        <h3 class=name>LVCC</h3>
+                        <p class="total-followers">000,000 followers</p>
+                        <button class="btn-follow">Follow</button>
+                    </div>
+
+                </div>
+
+                <div class="person-follower">
+                    <div class="upper-message">
+                        <h3>Recommended for you</h3>
+                        <button>See all</button>
+                    </div>
+
+                    <div class="followers">
+                        <div class="follower-option">
+                            <img class="main-img" src="/img/images.jfif">
+                            <img src="/img/dan.jpg" width= 150>
+                            <h3 class=name>Daniel Enciso</h3>
+                            <p class="total-followers">000,000 followers</p>
+                            <button class="btn-follow">Follow</button>
+                        </div>
+    
+                        <div class="follower-option">
+                            <img class="main-img" src="/img/download.jfif">
+                            <img src="/img/cess.jpg" width= 150>
+                            <h3 class=name>Princess Acula</h3>
+                            <p class="total-followers">000,000 followers</p>
+                            <button class="btn-follow">Follow</button>
+                        </div>
+    
+                        <div class="follower-option">
+                            <img class="main-img" src="/img/images (1).jfif">
+                            <img src="/img/mon.jpg" width= 150>
+                            <h3 class=name>Monica Ocampo</h3>
+                            <p class="total-followers">000,000 followers</p>
+                            <button class="btn-follow">Follow</button>
+                        </div>
+    
+                        <div class="follower-option">
+                            <img class="main-img" src="/img/artistic-soft-pink-cloud-sky-260nw-1738021724.jpg">
+                            <img src="/img/jem.jpg" width= 150>
+                            <h3 class=name>Jennylyn Molina</h3>
+                            <p class="total-followers">000,000 followers</p>
+                            <button class="btn-follow">Follow</button>
+                        </div>
+    
+                        <div class="follower-option">
+                            <img class="main-img" src="/img/360_F_442256083_EEAFXpvlE6ffs2Hgrd0hKZVZs7ZV1XQi.jpg">
+                            <img src="/img/267422726_610822070202629_2856259395437432073_n.jpg" width= 150>
+                            <h3 class=name>Amanda Ruazol</h3>
+                            <p class="total-followers">000,000 followers</p>
+                            <button class="btn-follow">Follow</button>
+                            
+                        </div>
+    
+                    </div>
+                </div>
+
+                <div class="event-follower">
+                    <div class="upper-message">
+                        <h3>Online Events</h3>
+                        <button>See all</button>
+                    </div>
+
+                    <div class="followers">
+                        <div class="person-option">
+                            <img class="header" src="/img/Webinar-y4it.jpg">
+                            <div class="about">
+                                <img class="profile" src="/img/ICT-week2021.jpg" width=100 height= 100>
+                                <a href=""> <h3 class="name">ICT Week</h3></a>
+                                <p>The Youth Congress on Information Technology</p>
+                             </div>
+                             <div  class="btn-event-follower">
+                                <button>View</button> 
+                             </div>
+                        </div>           
+    
+                        <div class="person-option">
+                            <img class="header" src="/img/Lvcc-thanksgiving.jpg" >
+                            <div class="about">
+                                <img class="profile" src="/img/lvcc-logo.png" width=100 height= 100>
+                                <a href=""> <h3 class="name">LVCC Thanksgiving</h3></a>
+                                <p class="total-followers-person">#Study Now, pay never</p>
+                            </div>
+                            <div  class="btn-event-follower">
+                                <button>View</button> 
+                             </div>
+                        </div>
+
+                        <div class="person-option">
+                            <img class="header" src="/img/PSITE.jpg" >
+                            <div class="about">
+                                <img class="profile" src="/img/download.png" width=100 height= 100>
+                                <a href=""> <h3 class="name">PSITE</h3></a>
+                                <p class="total-followers-person">#LET'S ENJOY</p>
+                            </div>
+                            <div class="btn-event-follower">
+                                <button>View</button> 
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    
+</body>
+</html>
